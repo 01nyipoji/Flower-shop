@@ -1,0 +1,407 @@
+:root{
+    --main-color:#F3CFED;
+    --text-color:#2E2E2E;
+    --accent-color:#FFB84C;
+    font-size: 10px;
+}
+
+body{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(asset/background.png.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 1rem 10%;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.shoppingBasket i{
+    width: 2rem;
+    height: 2rem;
+}
+
+.logo{
+    width: 10rem; 
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 1rem 2rem;
+}
+
+.nav-bar ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.nav-bar ul li a::after{
+    content: "";
+    width: 0;
+    height: 0.3rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    background: var(--accent-color);
+    transition: 0.5s;
+}
+
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 3rem;
+}
+
+.header-text h1{
+    font-size: 6rem;
+    margin-top: 2rem;
+}
+
+.header-text h1 span{
+    color: var(--accent-color);
+}
+
+#services{
+    padding: 3rem 0;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem;
+    margin-top: 5rem;
+}
+
+.services-list div{
+    background: var(--accent-color);
+    padding: 4rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-radius: 1rem;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 5rem;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size:  3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background-color: #fff;
+    transform: translateY(-1rem);
+}
+
+.subtitle{
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+#portfolio{
+    padding: 5rem 0;
+
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 4rem;
+    margin-top: 5rem;
+}
+
+.our-work-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    height: 8rem;
+}
+
+.shoppingBasket{
+    position: relative;
+}
+
+.shoppingBasket i{
+    font-size: 2.5rem;
+}
+.shoppingBasket .quantity{
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    color: var(--text-color);
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 2rem;
+
+}
+
+.work{
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), var(--accent-color));
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: height 0.5s;
+    color: var(--main-color);
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.layer button{
+    margin-top: 2rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 6rem;
+    background: var(--text-color);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 3rem;
+}
+
+.contact-left p i{
+    color: var(--accent-color);
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.social-icons{
+    margin-top: 3rem;
+
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--accent-color);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: var(--text-color);
+    transform: translateY(-0.5rem);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: var(--accent-color);
+    border: none;
+}
+
+.contact-right form{
+    width: 100%;
+
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(240, 223, 223);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 0.6rem;
+}
+
+form .btn2{
+    padding: 1.4rem 6rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem 0;
+    background: var(--accent-color);
+    font-weight: 300;
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+
+.copyright i{
+    color: red;
+}
+
+
+nav .fas{
+    display: none;
+}
+
+/* Success message style */
+#msg {
+  display: block;
+  color: var(--text-color); /* nice green */
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 1; /* start invisible */
+  transition: opacity 0.5s ease-in-out; /* smooth fade */
+}
+
+/* When active, show message */
+#msg.show {
+  opacity: 1;
+}
+
+
+@media(max-width: 600px){
+    :root{
+        font-size: 5px;
+    }
+
+    #header{
+        background-image: url(asset/phone.png);
+    }
+
+    .header-text{
+        margin-top: 100%;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 2rem;
+        color: black;
+    }
+
+    nav ul{
+        background: var(--accent-color);
+        position: fixed;
+        top: 0;
+        right: -20rem;
+        width: 20rem;
+        height: 100vh;
+        padding-top: 5rem;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 2.5rem;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+}
+
+/* #msg{
+    color: aquamarine;
+    display: block;
+    margin-top: 2rem;
+} */
